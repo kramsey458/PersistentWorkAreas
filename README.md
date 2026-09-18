@@ -1,11 +1,15 @@
-# Persistent Work Areas — Preview 1
+# Persistent Work Areas — Preview 2
 
 Keep a building's working-area outline visible after deselecting it, including while painting crops, planting trees, or using other tools.
+
+## New in 0.1.1
+
+The pin control now has a clearly drawn checkbox, an ON/OFF badge, a bordered dark panel, and hover/keyboard-focus highlighting. The entire row is clickable. The checkmark is drawn without a font glyph or the default Unity toggle theme. Pinning behavior is unchanged.
 
 ## Install
 
 1. Close Timberborn.
-2. Extract `PersistentWorkAreas-v0.1.0.zip` into your Timberborn `Mods` folder (normally `Documents\Timberborn\Mods`). The result should be `Mods\PersistentWorkAreas\version-1.1\manifest.json` and `PersistentWorkAreas.dll` beside it.
+2. Extract `PersistentWorkAreas-v0.1.1.zip` into your Timberborn `Mods` folder (normally `Documents\Timberborn\Mods`). The result should be `Mods\PersistentWorkAreas\version-1.1\manifest.json` and `PersistentWorkAreas.dll` beside it.
 3. Start Timberborn and enable **Persistent Work Areas** in the mod manager. Restart if prompted.
 
 Requires Timberborn **1.1.2.4** or a compatible 1.1 build. Built and checked against the installed 1.1.2.4 assemblies. Later versions may change the internal renderer API.
@@ -40,4 +44,4 @@ Install the .NET 8 SDK and have Timberborn installed, then run:
 .\build.ps1 -GameDir 'C:\Program Files (x86)\Steam\steamapps\common\Timberborn'
 ```
 
-The script builds the mod, runs checks, and creates `dist\PersistentWorkAreas-v0.1.0.zip`. No game, Unity, Harmony, or BeaverBuddies DLLs are redistributed. The game DLLs are used only as build references.
+The script builds the mod, runs checks, and creates `dist\PersistentWorkAreas-v0.1.1.zip`. No game, Unity, Harmony, or BeaverBuddies DLLs are redistributed. The game DLLs are used only as build references.

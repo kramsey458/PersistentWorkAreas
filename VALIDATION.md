@@ -1,4 +1,4 @@
-# Validation — Persistent Work Areas 0.1.0
+# Validation — Persistent Work Areas 0.1.1
 
 ## Completed
 
