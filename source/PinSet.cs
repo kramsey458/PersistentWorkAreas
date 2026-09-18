@@ -1,0 +1,30 @@
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+
+namespace PersistentWorkAreas
+{
+    // Reference identity prevents a replacement building inheriting a deleted building's pin.
+    internal sealed class PinSet<T> where T : class
+    {
+        private sealed class IdentityComparer : IEqualityComparer<T>
+        {
+            public bool Equals(T x, T y) => ReferenceEquals(x, y);
+            public int GetHashCode(T value) => RuntimeHelpers.GetHashCode(value);
+        }
+        private readonly HashSet<T> _items = new HashSet<T>(new IdentityComparer());
+        public int Count => _items.Count;
+        public IEnumerable<T> Items => _items;
+        public bool Contains(T item) => item != null && _items.Contains(item);
+        public bool Set(T item, bool pinned)
+        {
+            if (item == null) return false;
+            return pinned ? _items.Add(item) : _items.Remove(item);
+        }
+        public bool Clear()
+        {
+            if (_items.Count == 0) return false;
+            _items.Clear();
+            return true;
+        }
+    }
+}

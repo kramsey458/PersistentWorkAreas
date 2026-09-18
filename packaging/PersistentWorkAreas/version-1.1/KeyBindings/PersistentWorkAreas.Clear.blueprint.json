@@ -1,0 +1,10 @@
+{
+  "KeyBindingSpec": {
+    "Id": "PersistentWorkAreas.Clear",
+    "GroupId": "KeyBindingGroup.PersistentWorkAreas",
+    "LocKey": "PersistentWorkAreas.KeyBindings.Clear",
+    "Order": 0,
+    "AllowOtherModifiers": false,
+    "DevModeOnly": false
+  }
+}

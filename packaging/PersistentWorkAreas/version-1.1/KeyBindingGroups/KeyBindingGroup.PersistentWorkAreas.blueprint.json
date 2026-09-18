@@ -1,0 +1,7 @@
+{
+  "KeyBindingGroupSpec": {
+    "Id": "KeyBindingGroup.PersistentWorkAreas",
+    "Order": 1010,
+    "LocKey": "PersistentWorkAreas.KeyBindings.Group"
+  }
+}
