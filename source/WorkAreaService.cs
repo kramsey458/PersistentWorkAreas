@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Timberborn.BaseComponentSystem;
 using Timberborn.BlockSystem;
 using Timberborn.BlueprintSystem;
+using Timberborn.BuilderHubSystem;
 using Timberborn.BuildingRange;
 using Timberborn.Buildings;
 using Timberborn.Common;
@@ -80,6 +81,8 @@ namespace PersistentWorkAreas
         {
             if (!component) return false;
             var block = component.GetComponent<BlockObject>();
+            // The Builder's Hut has a road-spill range internally, but vanilla never shows it as a working area.
+            if (component.GetComponent<BuilderHubWorkplaceBehavior>()) return false;
             return block && !block.IsPreview && component.GetComponent<BuildingAccessible>() &&
                 (component.GetComponent<BuildingWithTerrainRange>() || component.GetComponent<BuildingWithRoadSpillRange>());
         }

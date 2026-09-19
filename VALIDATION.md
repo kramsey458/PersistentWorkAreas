@@ -1,9 +1,9 @@
-# Validation — Persistent Work Areas 0.1.1
+# Validation — Persistent Work Areas 0.1.2
 
 ## Completed
 
 - Compiled for `netstandard2.1` against the installed Timberborn 1.1.2.4 assemblies: zero errors and zero warnings.
-- 36 checks passed: reference-identity pins, duplicate pin/unpin, independent pins, replacement/deletion behavior, global clear, new-map isolation, native renderer constructors/methods/cleanup fields, delegate binding to internal renderer methods, lifecycle/navigation/event interfaces, no simulation persistence interfaces, no Harmony/BeaverBuddies dependencies, and package/key-binding consistency.
+- 37 checks passed: reference-identity pins, duplicate pin/unpin, independent pins, replacement/deletion behavior, global clear, new-map isolation, native renderer constructors/methods/cleanup fields, delegate binding to internal renderer methods, lifecycle/navigation/event interfaces, no simulation persistence interfaces, no Harmony/BeaverBuddies dependencies, package/key-binding consistency, and presence of the Builder's Hut marker component used to exclude it from pinning.
 - Compared the display path with the installed game's `BuildingRangeDrawer`, `BoundsNavRangeDrawer`, and navigation query calls. The mod uses those same range queries and its own outline-renderer instance.
 - Reviewed Preview 6's `IO/BuildCompatibility.cs`: its handshake identifies Timberborn and the BeaverBuddies/TimberNet binaries. This mod changes none of them.
 - The display service only implements frame-update, input, load, and navigation-notification interfaces. Pin state is per game-scoped service instance. There are no Harmony patches, replay events, simulation ticks, random calls, or save writes.

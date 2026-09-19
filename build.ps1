@@ -19,6 +19,6 @@ Copy-Item -Path (Join-Path $assets '*') -Destination $version -Recurse -Force
 Copy-Item -LiteralPath $dll -Destination $version -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'README.md') -Destination $package -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'VALIDATION.md') -Destination $package -Force
-$zip = Join-Path $OutputDir 'PersistentWorkAreas-v0.1.1.zip'
+$zip = Join-Path $OutputDir 'PersistentWorkAreas-v0.1.2.zip'
 Compress-Archive -LiteralPath $package -DestinationPath $zip -Force
 Get-FileHash -LiteralPath $zip -Algorithm SHA256

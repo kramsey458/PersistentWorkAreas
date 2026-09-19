@@ -68,6 +68,9 @@ var target = RuntimeHelpers.GetUninitializedObject(drawer);
 Check(drawer.GetMethod("Draw")!.CreateDelegate(typeof(Action), target) != null, "Internal draw method binds without Harmony");
 Check(drawer.GetMethod("UpdateArea")!.CreateDelegate(typeof(Action<>).MakeGenericType(cells), target) != null, "Internal update method binds without Harmony");
 
+var builderHut = GameType("Timberborn.BuilderHubSystem", "Timberborn.BuilderHubSystem.BuilderHubWorkplaceBehavior");
+Check(builderHut.IsClass, "Builder's Hut marker component exists (excluded from pinning)");
+
 var mod = Assembly.LoadFrom(modPath);
 var service = mod.GetType("PersistentWorkAreas.WorkAreaService", true)!;
 var interfaces = service.GetInterfaces().Select(x => x.FullName).ToArray();
