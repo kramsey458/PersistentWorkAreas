@@ -2,6 +2,8 @@
 
 Keep a building's working-area outline visible after deselecting it, including while painting crops, planting trees, or using other tools.
 
+**Website:** <https://kramsey458.github.io/PersistentWorkAreas/> has the feature overview, an install guide, troubleshooting, and an FAQ.
+
 ## New in 0.1.3
 
 Documentation correction only; there are no functional changes from 0.1.2. The game itself still draws a Builder's Hut's range outline while it is selected. That is vanilla behavior and is not changed by this mod. 0.1.2's notes incorrectly said vanilla shows no working area for Builder's Huts.

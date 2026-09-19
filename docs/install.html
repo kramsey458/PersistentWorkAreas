@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install guide - Persistent Work Areas</title>
+<meta name="description" content="How to install, enable, update and remove the Persistent Work Areas Timberborn mod.">
+<link rel="canonical" href="https://kramsey458.github.io/PersistentWorkAreas/install.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0d1716">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="7" fill="#1a2e2b" stroke="#577560" stroke-width="2"/><path d="M8 11h6V7h10v9h-4v9h-9v-4H8z" fill="#f5e6a3" fill-opacity=".22" stroke="#ebb859" stroke-width="2" stroke-linejoin="round"/><circle cx="21" cy="21" r="4" fill="#a8e075" stroke="#17301f" stroke-width="1.5"/></svg>
+      <span>Persistent Work Areas</span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="install.html" aria-current="page">Install</a></li>
+        <li><a href="troubleshooting.html">Troubleshooting</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a class="btn btn-small" href="https://github.com/kramsey458/PersistentWorkAreas">GitHub</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="container">
+      <h1>Install guide</h1>
+      <p>Extract one folder, enable the mod, and you're done. It takes about a minute.</p>
+    </div>
+  </div>
+
+  <div class="container layout">
+    <aside class="toc" aria-label="On this page">
+      <strong>On this page</strong>
+      <ol>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#verify">Check that it works</a></li>
+        <li><a href="#keybinding">Optional key binding</a></li>
+        <li><a href="#coop">Using it with BeaverBuddies</a></li>
+        <li><a href="#update">Updating</a></li>
+        <li><a href="#uninstall">Uninstalling</a></li>
+      </ol>
+    </aside>
+
+    <div class="prose">
+      <h2 id="requirements">Requirements</h2>
+      <ul>
+        <li><strong>Timberborn 1.1.2.4</strong> or a compatible 1.1 build.</li>
+        <li>Nothing else. No other mods, Harmony or BeaverBuddies are required.</li>
+        <li>A <code>Mods</code> folder inside your Timberborn user folder, normally <code>Documents\Timberborn\Mods</code>. If it doesn't exist yet, start the game once or create it yourself.</li>
+      </ul>
+      <p>The mod has been built and checked on Windows. If your Timberborn user folder is somewhere else, extract into the <code>Mods</code> folder there instead.</p>
+
+      <h2 id="install">Install</h2>
+      <ol class="steps">
+        <li>
+          <h3>Close Timberborn</h3>
+          <p>Mods are loaded when the game starts, so quit it first.</p>
+        </li>
+        <li>
+          <h3>Download the zip</h3>
+          <p>Get the newest release from GitHub. Choose the file named like <code>PersistentWorkAreas-vX.Y.Z.zip</code>, not the one ending in <code>-source.zip</code>, which is only the source code.</p>
+          <div class="btn-row"><a class="btn" href="https://github.com/kramsey458/PersistentWorkAreas/releases/latest" data-latest-zip>Download the latest zip</a></div>
+          <p class="file-name" data-zip-line hidden>File: <code data-zip-name></code></p>
+        </li>
+        <li>
+          <h3>Extract it into your Mods folder</h3>
+          <p>Right-click the zip, choose <strong>Extract All</strong>, and pick <code>Documents\Timberborn\Mods</code>. The result must look exactly like this, with <code>manifest.json</code> and the DLL side by side inside <code>version-1.1</code>:</p>
+<pre><code>Documents\Timberborn\Mods\
+  PersistentWorkAreas\
+    version-1.1\
+      manifest.json
+      PersistentWorkAreas.dll
+      KeyBindingGroups\
+      KeyBindings\
+      Localizations\
+    README.md
+    VALIDATION.md</code></pre>
+          <p>If you see <code>PersistentWorkAreas\PersistentWorkAreas\version-1.1</code>, the folder is nested one level too deep. Move the inner folder up.</p>
+        </li>
+        <li>
+          <h3>Start Timberborn and enable the mod</h3>
+          <p>Open the game's mod manager, enable <strong>Persistent Work Areas</strong>, and restart the game if it asks you to.</p>
+        </li>
+      </ol>
+
+      <h2 id="verify">Check that it works</h2>
+      <ol>
+        <li>Load a colony and select a farm, forester or lumberjack flag.</li>
+        <li>At the top of its info panel you should see a <strong>WORKING AREA</strong> section with a <strong>Keep working area visible</strong> row and an <strong>OFF</strong> badge.</li>
+        <li>Click the row so it reads <strong>ON</strong>, then deselect the building. Its outline should stay on screen, and a <strong>Clear pinned areas (1)</strong> button appears at the top right.</li>
+      </ol>
+      <div class="demo ui-sample" aria-label="Illustration of the panel"><div class="demo-ui">
+        <div class="ui-panel">
+          <div class="h">WORKING AREA</div>
+          <div class="ui-toggle" role="img" aria-label="Keep working area visible, currently OFF"><span class="box" aria-hidden="true"><i></i></span><span class="name">Keep working area visible</span><span class="state" aria-hidden="true">OFF</span></div>
+          <p class="hint">Click to pin this outline while planting or building.</p>
+        </div>
+      </div><div class="demo-foot"><span>Illustration of the panel, not a screenshot.</span></div></div>
+      <p style="margin-top:1.2em">You can also confirm the mod loaded by searching the game log for <code>[PersistentWorkAreas]</code>. See <a href="troubleshooting.html#log">where to find the log</a>.</p>
+      <p>If something doesn't look right, head to <a href="troubleshooting.html">Troubleshooting</a>.</p>
+
+      <h2 id="keybinding">Optional key binding</h2>
+      <p>The mod adds one shortcut, <strong>Clear all pinned working areas</strong>. It starts unbound so it can't take over a key you already use.</p>
+      <ol>
+        <li>Open the game's <strong>Settings</strong> and go to <strong>Key bindings</strong>.</li>
+        <li>Find the <strong>Persistent Work Areas</strong> group.</li>
+        <li>Assign a key to <strong>Clear all pinned working areas</strong>. Pick one that isn't used by a tool you have active while planting.</li>
+      </ol>
+
+      <h2 id="coop">Using it with BeaverBuddies</h2>
+      <p>The mod is designed for <strong>BeaverBuddies Stability Preview 6</strong>. Leave your existing BeaverBuddies installation as it is.</p>
+      <div class="callout note">
+        <strong class="t">Pins are local</strong>
+        <p>Each player pins and clears on their own computer, and nothing is sent over the network. Installing the mod on both computers is recommended for your first co-op session; running it on only one hasn't been playtested.</p>
+      </div>
+
+      <h2 id="update">Updating</h2>
+      <ol>
+        <li>Close Timberborn.</li>
+        <li>Download the newest zip from the <a href="https://github.com/kramsey458/PersistentWorkAreas/releases/latest">latest release</a>.</li>
+        <li>Extract it into the same <code>Mods</code> folder and choose <strong>Replace</strong> when asked about existing files.</li>
+        <li>Start the game and confirm <strong>Persistent Work Areas</strong> is still enabled in the mod manager.</li>
+      </ol>
+      <p>Pins are never saved, so there's nothing to migrate.</p>
+
+      <h2 id="uninstall">Uninstalling</h2>
+      <p>Disable the mod in the mod manager, or close the game and delete <code>Documents\Timberborn\Mods\PersistentWorkAreas</code>. Your saves are unaffected because the mod never writes to them.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container foot">
+    <div>
+      <p><strong>Persistent Work Areas</strong>, an unofficial Timberborn mod.</p>
+      <p>Timberborn is made by Mechanistry. This is a fan project and is not affiliated with or endorsed by them.</p>
+    </div>
+    <ul aria-label="Links">
+      <li><a href="install.html">Install</a></li>
+      <li><a href="troubleshooting.html">Troubleshooting</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="https://github.com/kramsey458/PersistentWorkAreas">Source</a></li>
+      <li><a href="https://github.com/kramsey458/PersistentWorkAreas/releases">Releases</a></li>
+      <li><a href="https://github.com/kramsey458/PersistentWorkAreas/issues">Report a problem</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

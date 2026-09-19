@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Persistent Work Areas">
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="#1a2e2b" stroke="#577560" stroke-width="2"/>
+  <path d="M8 11h6V7h10v9h-4v9h-9v-4H8z" fill="#f5e6a3" fill-opacity=".22" stroke="#ebb859" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="21" cy="21" r="4" fill="#a8e075" stroke="#17301f" stroke-width="1.5"/>
+</svg>
