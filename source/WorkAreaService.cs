@@ -81,7 +81,7 @@ namespace PersistentWorkAreas
         {
             if (!component) return false;
             var block = component.GetComponent<BlockObject>();
-            // The Builder's Hut has a road-spill range internally, but vanilla never shows it as a working area.
+            // The game gives every Builder's Hut a road-spill range (shown only while it is selected), but it is not a working area worth pinning.
             if (component.GetComponent<BuilderHubWorkplaceBehavior>()) return false;
             return block && !block.IsPreview && component.GetComponent<BuildingAccessible>() &&
                 (component.GetComponent<BuildingWithTerrainRange>() || component.GetComponent<BuildingWithRoadSpillRange>());

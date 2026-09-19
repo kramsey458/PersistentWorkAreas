@@ -2,9 +2,13 @@
 
 Keep a building's working-area outline visible after deselecting it, including while painting crops, planting trees, or using other tools.
 
-## New in 0.1.2
+## New in 0.1.3
 
-Builder's Huts can no longer be pinned. Vanilla Timberborn shows no working area for them, so the mod no longer shows a "Working area" panel or an outline for that building. Pinning for farms, foresters, lumberjacks, gatherers and other range buildings is unchanged.
+Documentation correction only; there are no functional changes from 0.1.2. The game itself still draws a Builder's Hut's range outline while it is selected. That is vanilla behavior and is not changed by this mod. 0.1.2's notes incorrectly said vanilla shows no working area for Builder's Huts.
+
+## 0.1.2
+
+Builder's Huts can no longer be pinned, so the mod no longer shows a "Working area" panel for that building. Pinning for farms, foresters, lumberjacks, gatherers and other range buildings is unchanged.
 
 ## 0.1.1
 
@@ -13,7 +17,7 @@ The pin control now has a clearly drawn checkbox, an ON/OFF badge, a bordered da
 ## Install
 
 1. Close Timberborn.
-2. Extract `PersistentWorkAreas-v0.1.2.zip` into your Timberborn `Mods` folder (normally `Documents\Timberborn\Mods`). The result should be `Mods\PersistentWorkAreas\version-1.1\manifest.json` and `PersistentWorkAreas.dll` beside it.
+2. Extract `PersistentWorkAreas-v0.1.3.zip` into your Timberborn `Mods` folder (normally `Documents\Timberborn\Mods`). The result should be `Mods\PersistentWorkAreas\version-1.1\manifest.json` and `PersistentWorkAreas.dll` beside it.
 3. Start Timberborn and enable **Persistent Work Areas** in the mod manager. Restart if prompted.
 
 Requires Timberborn **1.1.2.4** or a compatible 1.1 build. Built and checked against the installed 1.1.2.4 assemblies. Later versions may change the internal renderer API.
@@ -48,4 +52,4 @@ Install the .NET 8 SDK and have Timberborn installed, then run:
 .\build.ps1 -GameDir 'C:\Program Files (x86)\Steam\steamapps\common\Timberborn'
 ```
 
-The script builds the mod, runs checks, and creates `dist\PersistentWorkAreas-v0.1.2.zip`. No game, Unity, Harmony, or BeaverBuddies DLLs are redistributed. The game DLLs are used only as build references.
+The script builds the mod, runs checks, and creates `dist\PersistentWorkAreas-v0.1.3.zip`. No game, Unity, Harmony, or BeaverBuddies DLLs are redistributed. The game DLLs are used only as build references.
